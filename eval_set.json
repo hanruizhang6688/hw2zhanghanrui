@@ -1,0 +1,32 @@
+[
+  {
+    "id": "1",
+    "type": "normal",
+    "input": "Client: Acme Corp. Notes: Met with Jane. Discussed Q3 roadmap. Need to send pricing by Friday. Next meeting next Tuesday.",
+    "expected_behavior": "Generate a professional email summarizing the Q3 roadmap discussion, mentioning the pricing will be sent by Friday, and confirming the meeting for next Tuesday."
+  },
+  {
+    "id": "2",
+    "type": "edge",
+    "input": "Client: Unknown. Notes: just said hi. no action items.",
+    "expected_behavior": "Generate a polite check-in email acknowledging the brief touchpoint, without inventing action items."
+  },
+  {
+    "id": "3",
+    "type": "failure_hallucination_risk",
+    "input": "Client: TechGlobal. Notes: They mentioned some security compliance issue but I forgot which framework (SOC2 or ISO?). Will follow up.",
+    "expected_behavior": "Acknowledge the security discussion but do NOT invent or guess the compliance framework. Keep it open for clarification."
+  },
+  {
+    "id": "4",
+    "type": "normal",
+    "input": "Client: Beta Inc. Notes: Product demo went well. They want a 14-day trial. Setup meeting tomorrow 10 AM.",
+    "expected_behavior": "Provide the 14-day trial details and confirm the setup meeting for tomorrow at 10 AM."
+  },
+  {
+    "id": "5",
+    "type": "normal",
+    "input": "Client: Delta LLC. Notes: Contract signed. Kickoff next month.",
+    "expected_behavior": "Express enthusiasm for the signed contract and look forward to the kickoff next month."
+  }
+]
